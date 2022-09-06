@@ -1,0 +1,293 @@
+
+*** Everything in python is Object ****
+*** Every object contains methods ****
+
+
+number
+-------
+number can b integer or decimal or octal or hexa.
+
+aval = 10
+bval = 23.32
+
+
+string
+---------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "java programming"
+cname = """unix shell scripting"""
+dname = '''scala programming'''
+
+
+
+list ( array in C)
+-----------------
+list contains set of elements.
+Elements can be set of numbers or strings or any combination.
+list elements are defined in [].
+
+
+alist = [10,20,30,40]
+blist = ["unix",34.32,45]
+
+
+
+tuple ( read only , immutable , unchangeable)
+-------
+tuple contains set of elements.
+Elements can be set of numbers or strings or any combination.
+tuple elements are defined in ().
+**** Elements inside tuple cannot be modified DIRECTLY ******
+
+
+atup = (3.32,32,45,3)
+btup = (3432,45,"java")
+
+
+dictionary  ( json , hashmap in java , hash in perl )
+---------------
+dictionary contains elements in  the form of keys and values.
+dictionary is defined in {}.
+In dictionary, key can be either string or number used ot uniquely identity the value.
+            value can be number or string or list or tuple or dictionary or set or list of lists or any datastructure 
+
+
+syntax:    object = {key:value , key:value , key:value}
+example:    book  = {"chap1":10 ,"chap2":20,"chap3":30}
+            info  = {1:2,3:4,5:6}
+           bookinfo={"chap1":[10,"Rita","IND"] ,"chap2":[20,"Sita","US"]}
+
+
+
+set
+------
+set is unordered collection of unique values of same type.
+set elements are defined in {}.
+
+aset = {10,20,20,10,20,30}
+
+
+level1
+level1
+level1
+level1
+if cond:
+     level2
+     level2
+     level2
+     level2
+else:
+     level2 
+     level2
+     level2
+level1
+level1
+level1
+
+
+
+file handling
+-----------------
+
+
+
+working with flat files  ( txt csv conf log prop .properties )
+------------------------
+
+modes
+-------
+r
+w
+a
+
+
+opening the file
+--------------------
+
+syntax:    object = open(filename,mode)
+example:     fr = open('customers.txt','r')
+
+             fw = open('customers.txt','w')
+             case1: If the file is already existing with same name , it overwrites.
+             case2: If the file doesn't exist.... new file will be created first
+
+             fa = open('customers.txt','a')
+             case1: If the file is already existing with same name , it appends the new data at the end of the file
+             case2: If the file doesn't exist.... new file will be created first
+
+
+
+closing the file
+-------------------
+example:   fobj.close()
+
+read operation
+-----------------
+There are different ways to read the file
+
+- reading line by line using fobj
+- fobj.readlines()
+- fobj.read()
+- using csv library
+- using pandas library
+
+
+
+
+exception handling
+----------------------
+there are 2 types of errors
+
+- syntax error
+- semantic error
+
+
+handling the exceptions in the runtime is known as exception handling
+
+
+try
+except
+else
+finally
+raise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+working with third party files ( pdf  zip rar 7z  pptx docx xlsx )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+set
