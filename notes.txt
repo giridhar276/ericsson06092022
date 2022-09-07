@@ -236,6 +236,318 @@ working with third party files ( pdf  zip rar 7z  pptx docx xlsx )
 
 
 
+libraries
+----------
+
+builtin libraries
+---------------------
+Builtin libraries which are genrally used( OS operations , math operations , datetime , logging, system utilities , regular expressions .....) by everyone are installed with the python setup.
+
+
+
+third party libraries
+------------------------
+Depending on the requirement(cloud automations, ML , data analytics, networking , server automations , image processing , database automations) developer has to install the third party library from
+
+- using pip tool
+- downloading manually from www.pypi.org
+
+
+
+
+builtin libraries which are generally used
+----------------------------------------
+sys           : system python config information
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+pysftp
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings  ( grep +  awk  +sed )
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+frequently used third party libraries
+---------------------------------------
+database related
+----------------
+pymysql   :  working with MySQL
+cx_Oracle :  oracle db
+pymongo   :  Mongo DB
+pymssql   : sql server
+
+web frameworks ( developing web applications)
+--------------
+django
+flask
+bottom
+
+analytics/machine learning
+---------------------------
+numpy
+scipy
+pandas
+seaborn
+plotly
+ggplot
+matplotlib   : visualizing data .. bar graph.. pie graph
+scikit-learn :  machine learning algorithms
+
+image processing
+---------------
+pillow
+opencv
+pytorch
+
+
+APIs ( REST API)
+-----
+requests
+
+excel programming
+------------------
+openpyxl    : reading/write excel files
+xlsxwriter  : writing to excel file
+python-docx : working with ms-word
+pandas
+
+networking
+-----------
+paramiko   :  interacting with remote servers
+netmiko    :  connecting to router/switch
+pyping     :  ping any host or ip address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mysql commands
+----------------
+
+
+display all existing databases
+----------------------------
+show databases ;
+
+creating your database
+-----------------------
+create database ericsson ;
+
+access your database
+-------------------
+use ericsson;
+
+creating table
+------------------
+create table realestate ( street varchar(100) , city varchar(100) );
+
+
+inserting records
+------------------
+insert into realestate values('HitechCity','Hyderabad');
+insert into realestate values('MG Road','Bangalore');
+
+display all the records
+------------------------
+select * from realestate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
+
+file ---------------> database
+write a program to read realestate.csv and insert all the street and city columns data to the database with
+proper validations and exception handling
+
+- check whether the file is existing or not
+- use try except blocks
+- check whether the realestate.csv file size is greater than zero or not
+
+------------------------------------------------------------------------------------------------------
+database -------------> file
+write a program to connect to database which we have created and write the output of realestate table to the excel file
+
+
+
+
+re
+---
+
+re =  grep + awk + sed
+
+import re
+
+- searching for patterns
+- matching for patterns( beginning of the string)
+- substitute
+- findall
+- split
+
+
+wildcard characters or metacharacters  ( common across all the languages)
+--------------------------------------
+
+^ $  * + . * ?  ()  [] {}   \d \s \w
+
+
+
+^ : match at the beginning of the string
+
+
+$ : match at the end of the string
+
+* : zero or more occurences of the preceding character
+    if re.search('pyt*hon', line):
+
++ : one or more occurence of the precding character
+    if re.search('pyt+hon', line):
+
+. : any single character or digit or symbol
+    if re.search('.ython', line):
+
+
+(group1|group2) : display the lines containing group1 or group2
+                  if re.search('python|unix|java|oracle', line):
+
+
+{min,max}   : min to max occurences of the preceding character
+              if re.search('pyt{1,4}hon', line):
+              if re.search('pyt{1,}hon', line):     min is 1 and max can be anything
+              if re.search('pyt{4}hon', line):      t should be exactly defined for 4 times
+
+
+[]   : character class
+       if re.search('[mpq1]ython', line):       # mython  or python or qython or 1ython
+
+
+\d   : digit
+\s   : space
+\w   : word boundary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+functions
+----------
+- builtin functions
+- user defined functions
+
+
+- builtin functions
+-----------------------
+
+dir(__builtin__)    : will display all the list of builtin functions
+
+
+user defined functions |  definition | block | subroutines | functions
+--------------------------------------------------------------------------
+- code reusability
+- define the block once and call it for multiple times
+
+
+
+passing arguments
+------------------
+
+
+- fixed arguments
+- default arguments
+- variable length arguments
+
+
+
+
 
 
 
