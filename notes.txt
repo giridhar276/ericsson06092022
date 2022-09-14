@@ -1,72 +1,91 @@
-
 *** Everything in python is Object ****
-*** Every object contains methods ****
-
+*** Every object contains methods ***
 
 number
--------
-number can b integer or decimal or octal or hexa.
+---------
+number can be integer or decimal or octal or hexa.
 
-aval = 10
-bval = 23.32
+val = 10
+aval = 3.43
+
+
 
 
 string
----------
+--------
 string is defined in single or double or triple quotes.
 
 aname = 'python programming'
-bname = "java programming"
-cname = """unix shell scripting"""
-dname = '''scala programming'''
+bname = "unix shell"
+cname = """java programming"""
 
 
 
-list ( array in C)
------------------
+list ( array in C)(mutable)
+-------
 list contains set of elements.
-Elements can be set of numbers or strings or any combination.
+Elements can be numbers or strings or any combination.
 list elements are defined in [].
 
 
-alist = [10,20,30,40]
-blist = ["unix",34.32,45]
+alist = [10,20,30]
+blist = ["unix",20,34.32]
 
 
 
-tuple ( read only , immutable , unchangeable)
--------
+tuple  ( immutable , unchangeable , uneditable )
+------
 tuple contains set of elements.
-Elements can be set of numbers or strings or any combination.
+Elements can be numbers or strings or any combination.
 tuple elements are defined in ().
-**** Elements inside tuple cannot be modified DIRECTLY ******
+*** Elements inside tuple cannot be modified DIRECLY***
 
 
-atup = (3.32,32,45,3)
-btup = (3432,45,"java")
+atup = (10,2,3,0,"unix")
 
 
-dictionary  ( json , hashmap in java , hash in perl )
+
+dictionary  ( json file , hashmap in java, hash in perl )
 ---------------
-dictionary contains elements in  the form of keys and values.
+dictionary contains elements in key-value pairs.
 dictionary is defined in {}.
-In dictionary, key can be either string or number used ot uniquely identity the value.
-            value can be number or string or list or tuple or dictionary or set or list of lists or any datastructure 
 
 
-syntax:    object = {key:value , key:value , key:value}
-example:    book  = {"chap1":10 ,"chap2":20,"chap3":30}
-            info  = {1:2,3:4,5:6}
-           bookinfo={"chap1":[10,"Rita","IND"] ,"chap2":[20,"Sita","US"]}
+syntax:  object = {key:value , key :value , key:value }
+example:   book = {"chap1":10 ,"chap2":20 ,"chap3":30 }
 
 
 
 set
-------
-set is unordered collection of unique values of same type.
-set elements are defined in {}.
+-----
+set is UNORDERED collection of UNIQUE values of the same type.
 
-aset = {10,20,20,10,20,30}
+data = {10,10,10,20,30,30}
+
+
+
+
+
+
+single line comment
+--------------------
+# this is the single line comment
+
+
+multi line comment
+------------------
+
+'''
+these lines are treated
+as multi line comment
+'''
+
+"""
+these lines are treated
+as multi line comment
+"""
+
+
 
 
 level1
@@ -74,60 +93,129 @@ level1
 level1
 level1
 if cond:
-     level2
-     level2
-     level2
-     level2
+    level2
+    level2
+    level2
+    level2
+level1
+level1
+level1
+
+#####################################
+level1
+level1
+if cond:
+    level2
+    level2
 else:
-     level2 
-     level2
-     level2
+    level2
+    level2
+    level2
 level1
 level1
-level1
 
 
 
-file handling
------------------
 
 
-
-working with flat files  ( txt csv conf log prop .properties )
+classification of objects
 ------------------------
 
-modes
--------
-r
-w
-a
 
+mutable objects
+----------------
+list
+dictionary
+set
+
+immutable objects
+-----------------
+string
+tuple
+number
+
+
+
+function | module | subroutine | defintion
+------------------------------------------
+- resusability
+- define the block once and call it for multiple times
+
+
+
+builtin functions    dir(__builtin__)
+-------------------
+
+print()
+range()
+len()
+help()
+dir()
+input() : read the input from the keyboard
+type()
+round()
+isinstance()
+max()
+min()
+sum()
+
+
+
+
+list()
+tuple()
+int()
+float()
+oct()
+str()
+dict()
+set()
+
+
+
+
+
+
+
+
+
+
+working with flat files ( .csv .conf .log .txt .properties .dat .tsv   ... )
+---------------------------------------
+
+read mode     r mode
+write mode    w mode
+append mode   a mode
 
 opening the file
---------------------
+---------------------
+syntax :     object = open(filename,mode)
+example:       fr = open("customers.txt","r")
+               *** The file should exist in order to read the file ****
 
-syntax:    object = open(filename,mode)
-example:     fr = open('customers.txt','r')
+               fw = open("customers.txt","w")
+               case1: If the file is already existing .. it overwrites the existing content before writing
+               case2: If the file is not existing ...... file will be created
 
-             fw = open('customers.txt','w')
-             case1: If the file is already existing with same name , it overwrites.
-             case2: If the file doesn't exist.... new file will be created first
+               fa = open("customers.txt","a")
+               case1: If the file is already existing .. it appends the new data at the end of the file
+               case2: If the file is not existing ...... file will be created first
 
-             fa = open('customers.txt','a')
-             case1: If the file is already existing with same name , it appends the new data at the end of the file
-             case2: If the file doesn't exist.... new file will be created first
+
 
 
 
 closing the file
--------------------
-example:   fobj.close()
+--------------
+fobj.close()
+
+
 
 read operation
------------------
-There are different ways to read the file
+------------------
 
-- reading line by line using fobj
+
+- reading the file line by line using file object
 - fobj.readlines()
 - fobj.read()
 - using csv library
@@ -135,17 +223,145 @@ There are different ways to read the file
 
 
 
+operators
+-----------
+
+arithmetic operators :  + - * %  /
+
+
+relational operators :   < <= > >= == !=
+
+logical operators :   and    or   not
+
+name = 'python'
+if len(name) == 6  and name.islower():
+    ## do something
+
+
+
+if len(name) == 6  or name.islower():
+    # do something
+
+assignment operators ( ++ and -- are not allowed in python )
+----------------------
+
+
+val = 10
+val = val + 1   (or)  val+=1
+val = val -1    (or)  val-=1
+val = val * 1   (or)  val*=1
+
+
+special operators
+=================
+in
+as
++
+*
+
+
+
+
+if 'prog' in 'python programming':
+    # do something
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+working with third party files ( docx xlsx pdf mp4 ..... )
+---------------------------------------
+
+
+
+
+
+
+
+
 
 exception handling
 ----------------------
-there are 2 types of errors
+There are 2 types of errors.
 
-- syntax error
-- semantic error
+-syntax error
+-semantic error or runtime error or logical errors
 
 
-handling the exceptions in the runtime is known as exception handling
-
+Handling the errors in the runtime is known as exception handling.
 
 try
 except
@@ -155,240 +371,110 @@ raise
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-working with third party files ( pdf  zip rar 7z  pptx docx xlsx )
-
-
-
-
-
-
-
-
-
-
-libraries
-----------
+library | package | module | routine 
+-----------------------------------
+-Every library contains set of methods
+-mainly used for code reusability
 
 builtin libraries
 ---------------------
-Builtin libraries which are genrally used( OS operations , math operations , datetime , logging, system utilities , regular expressions .....) by everyone are installed with the python setup.
-
+Builtin libraries are generally used by everyone(math operations , mail operations , string manipulations .. OS operations , system level operations , platform details )  and all the builtin libraries are installed with the python.
 
 
 third party libraries
-------------------------
-Depending on the requirement(cloud automations, ML , data analytics, networking , server automations , image processing , database automations) developer has to install the third party library from
+---------------------
+Depending on the requirement( DB related, cloud libraries, ML , analytics ,image processing ), developer has to install the third party library from
 
 - using pip tool
-- downloading manually from www.pypi.org
+- downloading the library manually from www.pypi.org and installing it.
 
 
 
 
-builtin libraries which are generally used
-----------------------------------------
-sys           : system python config information
-urllib.request: working with http
-math          : mathematical operations
-random        : random numbers
-calendar
-smtplib       : sending mails
-ftplib        : ftp'ng the file
-pysftp
-telnetlib     :
-logging       : logging all the events
-shutil        : copy,move,rmtree ....
-filecmp       : comparing directories
-zipfile       : create/extract the zip files
-rarfile       : create/extract the tar files
-tarfile       : create/extract the tarfiles
-getpass       : shadowing the password
-json          : reading/writing json files
-csv           : reading/writing csv files
-xml        
-sysconfig     : system configuration
-collections   : working with dictionaries
-argparse      : passing args from command line
-optparse      : passing args from command line
-time          : working with date and time
-datetime      : working with date and time
-cryptography  : encrypting and decrypting the passwords
-heapq         : performing array operations
-gzip          : reading gunzip files
-re            : validating the strings  ( grep +  awk  +sed )
-ipadresss     : validting ip address
-platform      : display platform information
-pathlib       : creating temp files
-threading     : for performing multi threading
-multiprocessing:
-subprocess    : invoking the system commands ( linux or dos commands)
 
 
 
-frequently used third party libraries
----------------------------------------
-database related
-----------------
-pymysql   :  working with MySQL
-cx_Oracle :  oracle db
-pymongo   :  Mongo DB
-pymssql   : sql server
 
-web frameworks ( developing web applications)
---------------
-django
-flask
-bottom
-
-analytics/machine learning
----------------------------
-numpy
-scipy
-pandas
-seaborn
-plotly
-ggplot
-matplotlib   : visualizing data .. bar graph.. pie graph
-scikit-learn :  machine learning algorithms
-
-image processing
----------------
-pillow
-opencv
-pytorch
-
-
-APIs ( REST API)
------
-requests
-
-excel programming
+regular expressions    =  grep + awk + sed
 ------------------
-openpyxl    : reading/write excel files
-xlsxwriter  : writing to excel file
-python-docx : working with ms-word
-pandas
-
-networking
------------
-paramiko   :  interacting with remote servers
-netmiko    :  connecting to router/switch
-pyping     :  ping any host or ip address
 
 
 
+- search 
+- match at the beginning
+- split the string
+- findall
+- replace(substitution)
+
+
+
+metacharacters or wildcard characters ( universal concept common for all the languages)
+----------------------------------------
+^    $    .   +    *    ?    ()     []    {}    \d   \s    \w
+
+
+^ : match at the beginning 
+    
+    if re.search('^python',line):
+
+
+$ : will display all the lines ends with python
+
+
+* : zero or more occurences of the preceding character
+
+
++ : one or more occurences of the preceding character
+
+. : any single character or digit or symbol
+
+? : either zero or one occurence of the preceding character
+
+(group1|group2) :display the lines containing either group1 or group2
+                
+                :if re.search('(python|unix)',line):
+
+
+{min,max}  : min to max occurences of the preceding character
+             if re.search('pyt{2,5}hon',line):
+
+
+[]   :  character class
 
 
 
 
+mysql 
+-------
 
-
-
-
-
-
-
-
-
-
-mysql commands
-----------------
-
-
-display all existing databases
-----------------------------
+check all existing databases
+--------------------------
 show databases ;
 
-creating your database
------------------------
-create database ericsson ;
+
+creating database
+------------------
+create database ericsson;
+
 
 access your database
--------------------
-use ericsson;
+--------------------
+use erisccon;
+
 
 creating table
-------------------
+---------------
 create table realestate ( street varchar(100) , city varchar(100) );
 
 
 inserting records
-------------------
+---------------------
 insert into realestate values('HitechCity','Hyderabad');
 insert into realestate values('MG Road','Bangalore');
 
+
 display all the records
-------------------------
+-----------------------
 select * from realestate;
 
 
@@ -414,6 +500,13 @@ select * from realestate;
 
 
 
+database steps
+----------------
+connect to the database
+define query
+execute query
+fetch the output
+close the connection
 
 
 
@@ -425,126 +518,56 @@ select * from realestate;
 
 
 
+procedural programming ( top down approach )
+
+
+object oriented programming (OOP's )
+-------------------------------------
+- encapsulation
+- inheritance
+- data hiding
+- polymorphism
+- class and object
 
 
 
+class and object
+-----------------------
 
 
 
+class:
+-----
+class is just like blueprint of the house.
+Every class contains data members ( methods) and member variables( attributes)
 
-
-
-------------------------------------------------------------------------------------------------------
-
-file ---------------> database
-write a program to read realestate.csv and insert all the street and city columns data to the database with
-proper validations and exception handling
-
-- check whether the file is existing or not
-- use try except blocks
-- check whether the realestate.csv file size is greater than zero or not
-
-------------------------------------------------------------------------------------------------------
-database -------------> file
-write a program to connect to database which we have created and write the output of realestate table to the excel file
-
-
-
-
-re
----
-
-re =  grep + awk + sed
-
-import re
-
-- searching for patterns
-- matching for patterns( beginning of the string)
-- substitute
-- findall
-- split
-
-
-wildcard characters or metacharacters  ( common across all the languages)
---------------------------------------
-
-^ $  * + . * ?  ()  [] {}   \d \s \w
-
-
-
-^ : match at the beginning of the string
-
-
-$ : match at the end of the string
-
-* : zero or more occurences of the preceding character
-    if re.search('pyt*hon', line):
-
-+ : one or more occurence of the precding character
-    if re.search('pyt+hon', line):
-
-. : any single character or digit or symbol
-    if re.search('.ython', line):
-
-
-(group1|group2) : display the lines containing group1 or group2
-                  if re.search('python|unix|java|oracle', line):
-
-
-{min,max}   : min to max occurences of the preceding character
-              if re.search('pyt{1,4}hon', line):
-              if re.search('pyt{1,}hon', line):     min is 1 and max can be anything
-              if re.search('pyt{4}hon', line):      t should be exactly defined for 4 times
-
-
-[]   : character class
-       if re.search('[mpq1]ython', line):       # mython  or python or qython or 1ython
-
-
-\d   : digit
-\s   : space
-\w   : word boundary
-
-
-
-
-
-
-
-
-
-
+object
+-------
+object is the instance of the class.
 
 
 
 
 functions
-----------
+-----------
 - builtin functions
+
 - user defined functions
+-------------------------
 
 
-- builtin functions
------------------------
 
-dir(__builtin__)    : will display all the list of builtin functions
-
-
-user defined functions |  definition | block | subroutines | functions
---------------------------------------------------------------------------
-- code reusability
-- define the block once and call it for multiple times
-
+function | definition | subroutine 
+------------------------------------
+- code resusability
+- we define the code once and call it for multiple times
 
 
 passing arguments
 ------------------
-
-
-- fixed arguments
-- default arguments
-- variable length arguments
-
+-fixed arguments
+-default arguments
+-variable length arguments
 
 
 
@@ -598,8 +621,21 @@ passing arguments
 
 
 
-       
 
 
 
-set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
